@@ -16,8 +16,16 @@ app.get("/", function (req, res) {
     res.render("index", { pageTitle: "Home" });
 });
 
+app.get("/government/how-government-works", function (req, res) {
+    res.render("government/how-government-works", { pageTitle: "How government works" });
+});
+
 app.use("/cdn", express.static("content"));
 app.use("/cdn/bootstrap", express.static("node_modules/bootstrap/dist"));
+
+app.get('*', function(req, res){
+    res.status(404).send('what???');
+});
 
 app.listen(config.port, () => {
     console.log(`Ready.`);
