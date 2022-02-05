@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- Bootstrap CSS -->
+    <link
+      href="/cdn/bootstrap/css/bootstrap.min.css"
+      rel="stylesheet"
+      crossorigin="anonymous"
+    />
+
+    <link
+      href="/cdn/css/core.css"
+      rel="stylesheet"
+    />
+
+    <link rel="apple-touch-icon" sizes="180x180" href="/cdn/ico/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/cdn/ico/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/cdn/ico/favicon-16x16.png">
+    <link rel="manifest" href="/cdn/ico/site.webmanifest">
+
+    <title>{{ pageTitle }} • ПСТ</title>
+  </head>
+  <body>
+
+    <script>
+      window.onload = function () {
+  
+        try {
+  
+          mcm = new bootstrap.Modal(document.getElementById('minecraftModal'), {
+            keyboard: false
+          })
+          mcm.show();
+  
+        } catch (e) {}
+  
+        function doResize() {
+          var h = document.getElementById('globalNav').clientHeight + document.getElementById('siteNav').clientHeight + 25;
+          var mh = window.innerHeight - document.getElementsByTagName('footer')[0].clientHeight;
+          document.getElementById('content').style.paddingTop = h + "px";
+          document.getElementById('content').style.minHeight = mh + "px";
+    }
+  
+      doResize();
+  
+      window.addEventListener('resize', doResize, true);
+  
+      }
+    </script>
+    
+    <header>
+    <nav id="globalNav" class="py-0 bg-gray border-bottom" style="font-size: 0.9rem; line-height: 1.9;">
+        <div class="container d-flex flex-wrap">
+          <ul class="nav me-auto">
+            <li class="nav-item">
+                <img
+                src="/cdn/img/small_flag.png"
+                alt=""
+                height="40"
+                width="55"
+                class="nav-link px-2"
+                /></img>
+            </li>
+            <li class="nav-item">
+                <img
+                src="/cdn/img/small_pt.png"
+                alt=""
+                height="40"
+                width="55"
+                class="nav-link px-2"
+                /></img>
+            </li>
+            <li class="nav-item"><a href="#" class="nav-link link-dark px-2"><em>An official web-app of the Cloudic government</em></a></li>
+          </ul>
+          <ul class="nav">
+            <li class="nav-item"><a href="https://translate.cloudcraft.fi" class="nav-link link-dark px-2">Translator</a></li>
+            <li class="nav-item"><a href="https://aao.govoffice.cc" class="nav-link link-dark px-2 active" aria-current="page">ÁAO22</a></li>
+          </ul>
+        </div>
+      </nav>
+    <nav id="siteNav" class="navbar navbar-dark bg-dark shadow py-3 mb-4" style="margin-bottom: 2%; background-color: rgba(39, 21, 54,1) !important;">
+      <div class="container">
+        <a class="navbar-brand" href="/">
+          <img
+            src="/cdn/img/logo_white.png"
+            alt=""
+            width="24"
+            height="24"
+            class="d-inline-block align-text-top"
+          />
+          <span id="navbar-brand"></span>
+        </a>
+
+        <!--<ul class="nav">
+            {{^user}}
+            <a href="/auth/discord" class="nav-link link-light">Sign in</a>
+            {{/user}}
+            {{#user}}
+
+            <div class="dropdown text-end">
+                <a href="#" class="d-block link-light text-decoration-none dropdown-toggle" id="dropdownUser1" data-bs-toggle="dropdown" aria-expanded="false">
+                  <span style="color: #8f8f8f; font-size: 0.7rem;">{{ user.role }}</span>  
+                  <span>{{ user.username }}</span>
+                    <img src="https://cdn.discordapp.com/avatars/{{ user.id }}/{{ user.avatar }}.png" width="40" height="40" class="rounded-circle" style="margin-left: 2px;">
+                </a>
+                <ul class="dropdown-menu text-small shadow" aria-labelledby="dropdownUser1">
+                  <li><a class="dropdown-item" href="/member">Your tickets</a></li>
+                  {{ #user.crew }}
+                  <li><a class="dropdown-item" href="/crew">Crew</a></li>
+                  {{ /user.crew }}
+                  {{ #user.admin }}
+                  <li><a class="dropdown-item" href="/admin">Settings</a></li>
+                  {{ /user.admin }}
+                  <li><hr class="dropdown-divider"></li>
+                  <li><a class="dropdown-item" href="/auth/logout">Sign out</a></li>
+                </ul>
+              </div>
+
+            {{/user}}
+          </ul>-->
+
+      </div>
+    </nav>
+  </header>
+
+    <div id="content" class="container">

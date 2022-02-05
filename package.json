@@ -1,0 +1,24 @@
+{
+  "name": "govofficeweb",
+  "version": "1.0.0",
+  "description": "Cloudic Government + Executive Office website",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dandabs/GovOfficeWeb.git"
+  },
+  "author": "Daniel Adams",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/dandabs/GovOfficeWeb/issues"
+  },
+  "homepage": "https://github.com/dandabs/GovOfficeWeb#readme",
+  "dependencies": {
+    "bootstrap": "^5.1.3",
+    "express": "^4.17.2",
+    "mustache-express": "^1.3.2"
+  }
+}
