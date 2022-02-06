@@ -19,6 +19,10 @@ button {
     font-family: 'Inter', sans-serif;
 }
 
+.dropdown-menu {
+    border-radius: 0 !important;
+}
+
 .card .card-body {
     border-radius: 10px !important;
 }

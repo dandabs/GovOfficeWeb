@@ -95,33 +95,32 @@
           <span id="navbar-brand"></span>
         </a>
 
-        <!--<ul class="nav">
-            {{^user}}
-            <a href="/auth/discord" class="nav-link link-light">Sign in</a>
-            {{/user}}
-            {{#user}}
+        <ul class="nav">
 
-            <div class="dropdown text-end">
+            <div class="dropdown text-end" style="margin-right: 15px;">
                 <a href="#" class="d-block link-light text-decoration-none dropdown-toggle" id="dropdownUser1" data-bs-toggle="dropdown" aria-expanded="false">
-                  <span style="color: #8f8f8f; font-size: 0.7rem;">{{ user.role }}</span>  
-                  <span>{{ user.username }}</span>
-                    <img src="https://cdn.discordapp.com/avatars/{{ user.id }}/{{ user.avatar }}.png" width="40" height="40" class="rounded-circle" style="margin-left: 2px;">
+                  <span>Government</span>
                 </a>
                 <ul class="dropdown-menu text-small shadow" aria-labelledby="dropdownUser1">
-                  <li><a class="dropdown-item" href="/member">Your tickets</a></li>
-                  {{ #user.crew }}
-                  <li><a class="dropdown-item" href="/crew">Crew</a></li>
-                  {{ /user.crew }}
-                  {{ #user.admin }}
-                  <li><a class="dropdown-item" href="/admin">Settings</a></li>
-                  {{ /user.admin }}
+                  <li><a class="dropdown-item" href="/government/how-government-works">How it works</a></li>
+                  <li><a class="dropdown-item" href="/government/who-represents-me">Who's in it</a></li>
                   <li><hr class="dropdown-divider"></li>
-                  <li><a class="dropdown-item" href="/auth/logout">Sign out</a></li>
+                  <li><a class="dropdown-item" href="/government/behind-the-scenes">Suggestion protocol</a></li>
                 </ul>
               </div>
 
-            {{/user}}
-          </ul>-->
+              <div class="dropdown text-end">
+                <a href="#" class="d-block link-light text-decoration-none dropdown-toggle" id="dropdownUser1" data-bs-toggle="dropdown" aria-expanded="false">
+                  <span>Presidency</span>
+                </a>
+                <ul class="dropdown-menu text-small shadow" aria-labelledby="dropdownUser1">
+                  <li><a class="dropdown-item" href="/government/elections">Elections</a></li>
+                  <li><hr class="dropdown-divider"></li>
+                  <li><a class="dropdown-item" href="/forms/sd01">Run for President</a></li>
+                </ul>
+              </div>
+
+          </ul>
 
       </div>
     </nav>

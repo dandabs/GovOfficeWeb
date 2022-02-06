@@ -20,3 +20,10 @@ var options = {
 };
 
 var typed = new Typed('#navbar-brand', options);
+
+jQuery('div.dropdown').hover(function() {
+
+    jQuery(this).find('.dropdown-menu').stop(true, true).delay(200).fadeIn(300);
+  }, function() {
+  jQuery(this).find('.dropdown-menu').stop(true, true).delay(200).fadeOut(300);
+});
