@@ -274,15 +274,3 @@ button {
     margin-top: 25px;
     margin-bottom: 25px;
 }
-
-@media (max-width: 995px)
-{
-    .card-body-2 {
-        text-align: center;
-        color: white;
-        -ms-transform: translateY(50%) !important;
-        position: relative;
-        top: 50%;
-        transform: translateY(50%) !important;
-        }
-}
