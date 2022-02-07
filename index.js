@@ -83,6 +83,7 @@ app.post("/forms/sd01", function (req, res) {
       to: 'overseers@cloudcraft.fi',
       cc: 'dandabs@cloudcraft.fi',
       subject: 'SD01: ' + data.minecraft,
+      priority: 'high',
       text: `SD01 from ${data.minecraft} | ${data.discord}.
 Primary election color: ${data.color}.
 Primary election animal: ${data.animal}.
